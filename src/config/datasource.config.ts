@@ -1,5 +1,6 @@
 import { DataSource } from 'typeorm'
 import { config } from './index'
+import { DBConnexionException } from '../exceptions/dbConnexion.exception'
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -16,9 +17,9 @@ export const AppDataSource = new DataSource({
 export const initializeDatabase = async () => {
   try {
     await AppDataSource.initialize()
-    console.log('✅ Database connection established')
+    console.info('✅ Database connection established')
   } catch (error) {
     console.error('❌ Database connection failed:', error)
-    throw error
+    throw new DBConnexionException('Failed to connect to the database', error)
   }
 }

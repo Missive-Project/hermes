@@ -4,6 +4,7 @@ import { config } from './config'
 import { initializeDatabase } from './config/datasource.config'
 import { errorHandler } from './middlewares/error.middleware'
 import healthRoutes from './routes/health.routes'
+import { notFoundHandler } from './middlewares/notFound.middleware'
 
 const app: Application = express()
 
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api', healthRoutes)
 
+app.use(notFoundHandler)
 app.use(errorHandler)
 
 const startServer = async () => {
@@ -20,7 +22,7 @@ const startServer = async () => {
     await initializeDatabase()
 
     app.listen(config.port, () => {
-      console.log(
+      console.info(
         `🚀 Server running on port http://localhost:${config.port}/api/health`
       )
     })
