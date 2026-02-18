@@ -1,0 +1,36 @@
+## 🎯 PR Objective
+
+Short description of the pull request.
+
+## 🧩 Related Tickets
+
+- Jira Ticket: https://pabpro.atlassian.net/browse/MSV-15
+
+## ✅ Changes Made
+
+- [x] New feature
+- [ ] Bug fix
+- [ ] Refactoring
+- [ ] Configuration / infrastructure
+
+## 🧪 Tests Performed
+
+- [x] Manual tests via Postman
+- [x] Application starts without errors
+- [x] Validation of impacted endpoints
+
+## 🔐 Security Impact
+
+- [x] None
+- [ ] Authentication
+- [ ] Authorization
+- [ ] Data validation
+
+## 📌 Pre-merge Checklist
+
+- [x] Code compiles successfully
+- [x] Logs are clean
+- [x] Errors are properly handled
+- [x] Business rules are respected
+- [x] Code follows the defined architecture
+- [x] Jira ticket is up to date
