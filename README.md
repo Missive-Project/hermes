@@ -21,6 +21,7 @@ Hermes is a robust backend service that provides the API infrastructure for the 
 - **Runtime**: [Node.js](https://nodejs.org/)
 - **Framework**: [Express.js](https://expressjs.com/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **ORM**: [TypeORM](https://typeorm.io/docs/getting-started)
 - **Code Quality**: ESLint + Prettier
 - **Development**: Nodemon + ts-node
 
